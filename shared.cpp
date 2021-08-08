@@ -9,7 +9,7 @@ CMyClass *get_instance()
 CMyClass::CMyClass()
 {
     std::cout << "CMyClass ctor() called" << std::endl;
-    m_one = 1; m_two = 2; m_three = 3;
+//    m_one = 1; m_two = 2; m_three = 3;
 }
 
 void CMyClass::raiseEvent1()

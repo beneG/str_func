@@ -59,8 +59,11 @@ public:
                     std::string strDemangledName(demangled_name);
                     
                     std::cout << strDemangledName << std::endl;
-
-                    if (strDemangledName == "get_instance()") {
+                    
+                    //if (strDemangledName == "CMyClass::CMyClass()")
+                    
+                    if (strDemangledName == "get_instance()")
+                    {
                         func_cmyclass_ctor_t ctor = (func_cmyclass_ctor_t)dlsym(library_handle, str);
                         m_pStatechartObject = std::make_unique<CMyClass>(*ctor());
 
